@@ -389,7 +389,7 @@ export class Pack
 
   [ENTRYOPT](job: PackJob): TarOptions {
     return {
-      onwarn: (code, msg, data) => this.warn(code, msg, data),
+      onwarn: (code: any, msg: any, data: any) => this.warn(code, msg, data),
       noPax: this.noPax,
       cwd: this.cwd,
       absolute: job.absolute,

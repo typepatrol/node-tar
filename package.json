@@ -10,7 +10,7 @@
   "scripts": {
     "genparse": "node scripts/generate-parse-fixtures.js",
     "snap": "tap",
-    "test": "tap",
+    "test": "c8 tap",
     "pretest": "npm run prepare",
     "presnap": "npm run prepare",
     "prepare": "tshy",
@@ -29,6 +29,7 @@
     "yallist": "^5.0.0"
   },
   "devDependencies": {
+    "c8": "^10.1.3",
     "chmodr": "^1.2.0",
     "end-of-stream": "^1.4.3",
     "events-to-array": "^2.0.3",
@@ -321,5 +322,20 @@
   },
   "type": "module",
   "main": "./dist/commonjs/index.js",
-  "types": "./dist/commonjs/index.d.ts"
+  "types": "./dist/commonjs/index.d.ts",
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "all": true,
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "test/**",
+      "dist/**"
+    ]
+  }
 }

@@ -11,7 +11,7 @@
     "genparse": "node scripts/generate-parse-fixtures.js",
     "snap": "tap",
     "test": "c8 tap",
-    "test:no-clean": "c8 --no-clean tap",
+    "test:no-clean": "c8 --no-clean tap --disable-coverage",
     "test:clean": "rm -rf coverage .nyc_output",
     "test:report": "c8 report --reporter=text --reporter=lcov",
     "pretest": "npm run prepare",

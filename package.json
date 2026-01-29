@@ -333,12 +333,12 @@
     ],
     "all": true,
     "include": [
-      "src/**/*.ts"
+      "dist/esm/**.js",
+      "dist/commonjs/**.js"
     ],
     "exclude": [
       "**/*.d.ts",
-      "test/**",
-      "dist/**"
+      "test/**"
     ]
   }
 }
